@@ -1,12 +1,17 @@
-var name = prompt("What is your full name?");
-var home = prompt("Where are you from?");
-var major = prompt("What is your major?");
+var mileage = prompt("How many miles approximately do you drive per year?");
 
-function greeting() {
-  document.querySelector(".name").innerHTML =
-    "Hello, my name is " + name + ". ";
-  document.querySelector(".home").innerHTML = "I am from " + home + ". ";
-  document.querySelector(".major").innerHTML = "My major is " + major + ". ";
+var gasPrice = prompt("What is the cost of one gallon of gas in your area?");
+
+
+function annualVehicleCost(mpgRating) {
+  var totalAnnualCost = mileage * gasPrice * mpgRating;
+  document.querySelector(".totalCarGasExpense").innerHTML = ("The estimated annual cost of a vehicle with a mpg rating of " + mpgRating + " for " + mileage + " miles at " + gasPrice + " per gallon is " + totalAnnualCost + ".");
 }
 
-greeting();
+annualVehicleCost(12);
+
+annualVehicleCost(17);
+
+annualVehicleCost(26);
+
+annualVehicleCost(29);
